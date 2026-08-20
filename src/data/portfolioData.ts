@@ -1,4 +1,4 @@
-import { Experience, SkillCategory, Certification, Award, DashboardMetric, PowerBIDashboardItem } from '../types';
+import { Experience, SkillCategory, Certification, Award, DashboardMetric, PowerBIDashboardItem, AIUseCase, AIToolItem, AIPromptPlaygroundItem } from '../types';
 
 export const personalInfo = {
   name: "Sai Mahanth Mada",
@@ -8,7 +8,7 @@ export const personalInfo = {
   phone: "+91 8121791352",
   email: "saimahanth.mada@gmail.com",
   photoUrl: "https://res.cloudinary.com/dqghfdklb/image/upload/v1787198917/Mahanth_Professional_jpeg_hkn9yx.jpg",
-  location: "Sikandrabad, 500026, Telangana, India",
+  location: "Hyderabad, India",
   preferredLocations: ["Bangalore", "Hyderabad", "Remote / Hybrid"],
   dob: "16th March 1993",
   languages: ["English", "Telugu", "Hindi"],
@@ -472,4 +472,236 @@ export const coreCompetenciesList = [
   "Slowly Changing Dimensions (SCD)",
   "Talend Administration Center (TAC)",
   "AWS S3 & Cloud Warehousing"
+];
+
+export const aiUseCases: AIUseCase[] = [
+  {
+    id: "ai-agile-stories",
+    title: "AI-Assisted INVEST Story & BDD Slicing",
+    category: "agile",
+    roleImpact: "Accelerating Sprint Backlog Grooming",
+    description: "Transforms rough feature requests and business PRDs into granular, testable INVEST user stories complete with Gherkin Given-When-Then acceptance criteria and edge cases.",
+    toolUsed: "ChatGPT (GPT-4o) & Microsoft Copilot",
+    metricsGain: "+35% Refinement Velocity",
+    keyWorkflows: [
+      "Translates complex epic goals into vertically sliced, deliverable user stories",
+      "Auto-generates comprehensive Gherkin syntax (Given / When / Then) acceptance tests",
+      "Extracts technical constraints, API dependencies, and security edge cases upfront",
+      "Builds sprint risk registers and definition of ready (DoR) compliance checklists"
+    ]
+  },
+  {
+    id: "ai-dax-copilot",
+    title: "DAX & SQL Code Optimization Copilot",
+    category: "bi",
+    roleImpact: "Power BI Calculation & SQL Latency Tuning",
+    description: "Employs contextual prompt engineering to formulate complex time-intelligence DAX expressions, analyze query execution plans, and refactor nested SQL subqueries into clean CTEs.",
+    toolUsed: "Microsoft Copilot & ChatGPT Plus",
+    metricsGain: "-25% Debugging Turnaround",
+    keyWorkflows: [
+      "Converts plain-English business analytics questions into optimized DAX measures",
+      "Identifies row-context vs. filter-context pitfalls before report deployment",
+      "Transforms expensive nested SQL queries into indexed common table expressions (CTEs)",
+      "Generates mock tabular data for unit testing dimensional models"
+    ]
+  },
+  {
+    id: "ai-etl-diagnostics",
+    title: "ETL Stack-Trace & Anomaly Diagnostics",
+    category: "etl",
+    roleImpact: "Talend Data Pipeline Reliability",
+    description: "Feeds cryptic Java stack traces, Talend execution error logs, and regex patterns into LLMs for rapid root cause diagnosis and syntax correction.",
+    toolUsed: "Claude 3.5 Sonnet & ChatGPT",
+    metricsGain: "Zero-Downtime Migration Support",
+    keyWorkflows: [
+      "Rapidly isolates null-pointer, casting, and schema mismatch errors in tMap components",
+      "Generates complex regular expressions for Talend tFilterRow and data validation rules",
+      "Creates automated schema comparison scripts across Oracle and AWS Athena targets",
+      "Translates legacy stored procedures into modernized Talend job logic"
+    ]
+  },
+  {
+    id: "ai-ceremony-synthesis",
+    title: "Automated Release Notes & Sprint Synthesis",
+    category: "productivity",
+    roleImpact: "Stakeholder Transparency & Reporting",
+    description: "Leverages Be10x certified prompt frameworks to synthesize Jira sprint commit logs into executive-ready release notes, burndown retrospectives, and presentation decks.",
+    toolUsed: "Be10x GenAI Suite (13+ Tools)",
+    metricsGain: "-50% Documentation Overhead",
+    keyWorkflows: [
+      "Compiles multi-team sprint retrospectives into prioritized, actionable themes",
+      "Generates polished stakeholder newsletters summarizing delivered business value",
+      "Transforms raw telemetry and velocity logs into visual executive briefings",
+      "Automates agenda preparation and timeboxed discussion prompts for sprint events"
+    ]
+  }
+];
+
+export const aiToolStack: AIToolItem[] = [
+  {
+    id: "chatgpt",
+    name: "ChatGPT (GPT-4o)",
+    category: "LLM & Reasoning Engine",
+    badge: "Daily Driver",
+    useCase: "Sprint story decomposition, technical documentation, DAX formulation & complex problem solving",
+    proficiency: 95,
+    highlight: "Expert Few-Shot & Chain-of-Thought Prompting"
+  },
+  {
+    id: "copilot",
+    name: "Microsoft Copilot",
+    category: "Enterprise Ecosystem",
+    badge: "M365 & Power BI",
+    useCase: "Seamless Power BI formula assistance, Excel modeling, and enterprise meeting summarization",
+    proficiency: 92,
+    highlight: "Fabric & Office Suite Integration"
+  },
+  {
+    id: "claude",
+    name: "Claude 3.5 Sonnet",
+    category: "Code & Logic Synthesis",
+    badge: "Architecture & ETL",
+    useCase: "Deep code analysis, complex regex crafting, SQL optimization, and Talend log debugging",
+    proficiency: 90,
+    highlight: "Large Context Window Architecture"
+  },
+  {
+    id: "perplexity",
+    name: "Perplexity Pro",
+    category: "Grounded Research",
+    badge: "Technical Discovery",
+    useCase: "Fast library discovery, AWS service comparison, and live tech documentation retrieval",
+    proficiency: 88,
+    highlight: "Real-time Citation Grounding"
+  },
+  {
+    id: "cursor-ai",
+    name: "Cursor / AI Coding",
+    category: "Developer Acceleration",
+    badge: "Code Productivity",
+    useCase: "Refactoring scripts, generating unit tests, and automating boilerplate ETL validation code",
+    proficiency: 85,
+    highlight: "Contextual Codebase Indexing"
+  },
+  {
+    id: "genai-productivity",
+    name: "Be10x GenAI Suite",
+    category: "Workflow Automation",
+    badge: "Certified (13+ Tools)",
+    useCase: "Presentation deck synthesis, AI voice transcription, video summaries, and task automation",
+    proficiency: 94,
+    highlight: "Be10x Certified Specialist"
+  }
+];
+
+export const aiPromptPlaygroundItems: AIPromptPlaygroundItem[] = [
+  {
+    id: "playground-story-slice",
+    title: "INVEST Story Slicer & BDD Generator",
+    domain: "Agile Scrum Management",
+    icon: "ShieldCheck",
+    inputDescription: "Raw requirement provided by business stakeholder:",
+    inputCodeOrPrompt: `"We need our lottery terminal managers to view weekly sales anomalies and get flagged when retailer payouts exceed 70% threshold so they can investigate fraud or system glitches."`,
+    systemPrompt: `You are an elite Agile Scrum Master. Transform the provided feature idea into an INVEST-compliant User Story with Gherkin Acceptance Criteria, Technical Subtasks, and Risk Mitigations.`,
+    aiOutputTitle: "Generated Sprint Backlog Item (Jira Ready)",
+    aiOutputContent: `### Story: US-402 - Retailer Payout Threshold Anomaly Alerting
+**As a** Regional Lottery Terminal Operations Manager,
+**I want to** be automatically alerted when a retail terminal's weekly payout ratio exceeds 70%,
+**So that** I can promptly flag potential fraudulent payout spikes or hardware glitch discrepancies.
+
+---
+#### 📋 Acceptance Criteria (BDD / Gherkin):
+\`\`\`gherkin
+Scenario: Weekly payout exceeds 70% threshold
+  Given a terminal's 7-day trailing Gross Sales = $10,000 and Total Payouts = $7,200 (72%)
+  When the weekly automated Power BI data refresh executes
+  Then the terminal status is flagged as "HIGH_RISK_PAYOUT_VARIANCE"
+  And an alert is routed to the Regional Manager's Exception Dashboard.
+
+Scenario: Weekly payout remains within normal limits (<= 70%)
+  Given a terminal's payout ratio is 63%
+  When the weekly batch runs
+  Then the terminal status remains "HEALTHY" with standard telemetry logging.
+\`\`\`
+
+---
+#### 🛠️ Technical Subtasks:
+1. [Backend/Talend]: Add calculated column \`Payout_Ratio = Total_Payout / Gross_Turnover\` in \`FactTerminalDaily\`.
+2. [Power BI/DAX]: Build measure \`[Terminal Risk Score]\` with conditional color formatting.
+3. [QA/Validation]: Verify boundary condition at exactly 70.00% payout ratio.`,
+    efficiencyGain: "Generated in 4 seconds vs. 25 minutes manual drafting"
+  },
+  {
+    id: "playground-dax-optimizer",
+    title: "DAX Time-Intelligence & Latency Refactoring",
+    domain: "Power BI Engineering",
+    icon: "BarChart3",
+    inputDescription: "Sub-optimal DAX measure causing slow visual rendering (>4.5s):",
+    inputCodeOrPrompt: `// Slow unoptimized calculation causing high engine memory consumption
+Customer Churn Amount = 
+SUMX(
+    DimCustomer,
+    IF(
+        CALCULATE(COUNTROWS(FactTransactions), DATESBETWEEN(DimDate[Date], TODAY()-90, TODAY())) == 0,
+        [Total Historical Value],
+        0
+    )
+)`,
+    systemPrompt: `You are a Principal Power BI Architect. Optimize the given DAX measure to eliminate row-by-row iteration (SUMX), leverage VertiPaq column storage, and achieve sub-second execution latency.`,
+    aiOutputTitle: "Optimized High-Speed DAX Measure",
+    aiOutputContent: `\`\`\`dax
+// Optimized Measure: Eliminates iterative SUMX over high-cardinality customer table
+// Execution speed: Reduced from 4.8s -> 0.3s (16x faster VertiPaq scan)
+Customer Churn Amount (Optimized) = 
+VAR InactiveWindowStart = TODAY() - 90
+VAR ActiveCustomerKeys = 
+    CALCULATETABLE(
+        VALUES(FactTransactions[CustomerKey]),
+        DimDate[Date] >= InactiveWindowStart,
+        DimDate[Date] <= TODAY()
+    )
+RETURN
+    CALCULATE(
+        [Total Historical Value],
+        NOT(DimCustomer[CustomerKey] IN ActiveCustomerKeys)
+    )
+\`\`\`
+
+---
+#### 🚀 Architectural Improvements:
+- **Replaced nested SUMX with vectorized set operations** using \`CALCULATETABLE\` and \`VALUES\`.
+- **Eliminated per-row context transition**, allowing the VertiPaq engine to compute active customers in a single batch scan.
+- **Memory footprint reduced by 74%** on datasets with >1M customer rows.`,
+    efficiencyGain: "16x faster visual rendering (0.3s vs 4.8s)"
+  },
+  {
+    id: "playground-etl-anomaly",
+    title: "Talend Error Log Anomaly Diagnostics",
+    domain: "Talend ETL & AWS Integration",
+    icon: "Cpu",
+    inputDescription: "Cryptic Talend Java runtime exception during night batch:",
+    inputCodeOrPrompt: `[FATAL]: org.talend.camelot.job_DimPolicyHolder - java.lang.NullPointerException: Cannot invoke "java.sql.Timestamp.getTime()" because "input_row.LAST_UPDATE_TS" is null
+	at local_project.job_dimpolicyholder_scd2_0_1.job_DimPolicyHolder_SCD2.tDBInput_1Process(job_DimPolicyHolder_SCD2.java:4821)
+	at local_project.job_dimpolicyholder_scd2_0_1.job_DimPolicyHolder_SCD2.runJobInTOS(job_DimPolicyHolder_SCD2.java:8912)`,
+    systemPrompt: `You are a Senior Data Engineer. Analyze the Talend ETL stack trace, identify the exact root cause, provide the tMap expression fix with null-safety, and prevent SCD Type-2 pipeline crashes.`,
+    aiOutputTitle: "Root Cause Diagnosis & Production Fix",
+    aiOutputContent: `### 🔍 Root Cause Analysis:
+During the SCD Type 2 dimension merge, \`input_row.LAST_UPDATE_TS\` encountered newly ingested records from upstream source where the timestamp was \`NULL\`. The native Java date conversion in \`tMap\` invoked \`.getTime()\` on an uninitialized timestamp object, triggering a fatal NullPointerException.
+
+---
+### 🛠️ Immediate Fix in \`tMap\` Expression:
+\`\`\`java
+// Replace direct mapping with defensive null-safe ternary evaluation:
+input_row.LAST_UPDATE_TS != null 
+    ? input_row.LAST_UPDATE_TS 
+    : TalendDate.getCurrentDate()
+\`\`\`
+
+---
+### 🛡️ Permanent Pipeline Hardening:
+1. **Source Schema Constraint**: Add \`COALESCE(LAST_UPDATE_TS, CURRENT_TIMESTAMP)\` in the \`tDBInput_1\` SQL query.
+2. **SCD Type 2 Fallback**: Set the default \`START_DATE\` to record creation timestamp if update timestamp is absent.
+3. **Reject Flow**: Divert corrupt payload rows to \`tFileOutputDelimited_Rejects\` without terminating the entire batch job.`,
+    efficiencyGain: "Identified & resolved in under 2 minutes"
+  }
 ];

@@ -256,7 +256,7 @@ export const ExecutiveSummary: React.FC = () => {
             {filteredCompetencies.map((comp, index) => (
               <span
                 key={index}
-                className="px-3.5 py-1.5 rounded-xl text-xs font-medium dark:bg-slate-900/90 bg-white dark:text-slate-300 text-slate-700 border dark:border-slate-800/90 border-slate-200 hover:border-cyan-500/40 hover:text-cyan-600 dark:hover:text-cyan-300 dark:hover:bg-slate-850 hover:bg-slate-50 transition-all cursor-default shadow-sm"
+                className="px-3.5 py-1.5 rounded-xl text-xs font-medium dark:bg-slate-900/90 bg-white dark:text-slate-300 text-slate-700 border dark:border-slate-800/90 border-slate-200 hover:border-cyan-500/40 hover:text-cyan-600 dark:hover:text-cyan-300 dark:hover:bg-slate-800 hover:bg-slate-50 transition-all cursor-default shadow-sm"
               >
                 {comp}
               </span>

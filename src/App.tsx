@@ -6,6 +6,7 @@ import { ExecutiveSummary } from './components/ExecutiveSummary';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
 import { PowerBIDashboardShowcase } from './components/PowerBIDashboardShowcase';
 import { AgileSprintSimulator } from './components/AgileSprintSimulator';
+import { AIExpertiseSection } from './components/AIExpertiseSection';
 import { SkillsMatrix } from './components/SkillsMatrix';
 import { CertificationsAndAwards } from './components/CertificationsAndAwards';
 import { ContactSection } from './components/ContactSection';
@@ -57,10 +58,13 @@ function PortfolioApp() {
         {/* 4. Interactive Power BI & Analytics Showroom */}
         <PowerBIDashboardShowcase />
 
-        {/* 5. Interactive Agile Sprint Simulator & Playbook */}
+        {/* 5. Applied Generative AI & Intelligent Workflows Lab */}
+        <AIExpertiseSection />
+
+        {/* 6. Interactive Agile Sprint Simulator & Playbook */}
         <AgileSprintSimulator />
 
-        {/* 6. Technical & Leadership Skills Matrix */}
+        {/* 7. Technical & Leadership Skills Matrix */}
         <SkillsMatrix />
 
         {/* 7. Certifications & Enterprise Awards */}

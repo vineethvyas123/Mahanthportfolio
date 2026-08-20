@@ -78,7 +78,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenCo
               <button
                 id="hero-copy-email-btn"
                 onClick={() => handleCopy(personalInfo.email, 'email')}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg dark:bg-slate-900/80 bg-white hover:bg-slate-50 dark:hover:bg-slate-850 border dark:border-slate-800 border-slate-200 text-xs font-medium dark:text-slate-300 text-slate-700 dark:hover:text-white hover:text-slate-950 transition-all group shadow-sm"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg dark:bg-slate-900/80 bg-white hover:bg-slate-100 dark:hover:bg-slate-800 border dark:border-slate-800 border-slate-200 text-xs font-medium dark:text-slate-300 text-slate-700 dark:hover:text-white hover:text-slate-950 hover:border-slate-300 dark:hover:border-slate-700 transition-all group shadow-sm"
                 title="Click to copy email address"
               >
                 <Mail className="w-3.5 h-3.5 text-cyan-500 group-hover:scale-110 transition-transform" />
@@ -93,7 +93,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenCo
               <button
                 id="hero-copy-phone-btn"
                 onClick={() => handleCopy(personalInfo.phone, 'phone')}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg dark:bg-slate-900/80 bg-white hover:bg-slate-50 dark:hover:bg-slate-850 border dark:border-slate-800 border-slate-200 text-xs font-medium dark:text-slate-300 text-slate-700 dark:hover:text-white hover:text-slate-950 transition-all group shadow-sm"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg dark:bg-slate-900/80 bg-white hover:bg-slate-100 dark:hover:bg-slate-800 border dark:border-slate-800 border-slate-200 text-xs font-medium dark:text-slate-300 text-slate-700 dark:hover:text-white hover:text-slate-950 hover:border-slate-300 dark:hover:border-slate-700 transition-all group shadow-sm"
                 title="Click to copy phone number"
               >
                 <Phone className="w-3.5 h-3.5 text-cyan-500 group-hover:scale-110 transition-transform" />
@@ -132,12 +132,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenCo
               </button>
 
               <a
+                id="hero-try-ai-lab-btn"
+                href="#ai-lab"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl dark:bg-slate-900/80 bg-cyan-50 hover:bg-cyan-100 dark:hover:bg-slate-800 dark:text-cyan-300 text-cyan-800 font-semibold text-xs border dark:border-cyan-500/40 border-cyan-300 transition-all active:scale-95 shadow-sm"
+              >
+                <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400 animate-pulse" />
+                <span>Explore AI Lab</span>
+              </a>
+
+              <a
                 id="hero-try-simulator-btn"
                 href="#simulator"
-                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl dark:bg-slate-900/60 bg-cyan-50 hover:bg-cyan-100 dark:hover:bg-slate-850 dark:text-cyan-300 text-cyan-800 font-semibold text-xs border dark:border-cyan-500/30 border-cyan-200 transition-all active:scale-95 shadow-sm"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl dark:bg-slate-900/60 bg-slate-100 hover:bg-slate-200 dark:hover:bg-slate-800 dark:text-slate-300 text-slate-700 font-semibold text-xs border dark:border-slate-800 border-slate-200 transition-all active:scale-95 shadow-sm"
               >
-                <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
-                <span>Try Agile Sandbox</span>
+                <Layers className="w-4 h-4 text-slate-500" />
+                <span>Agile Sandbox</span>
               </a>
             </div>
 
@@ -147,11 +156,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume, onOpenCo
               <span className="inline-flex items-center gap-1.5 dark:bg-slate-900 bg-white px-2.5 py-1 rounded-md border dark:border-slate-800 border-slate-200 dark:text-slate-300 text-slate-700 shadow-sm">
                 <ShieldCheck className="w-3.5 h-3.5 text-cyan-500" /> Certified Scrum Master (Scrum.org)
               </span>
-              <span className="inline-flex items-center gap-1.5 dark:bg-slate-900 bg-white px-2.5 py-1 rounded-md border dark:border-slate-800 border-slate-200 dark:text-slate-300 text-slate-700 shadow-sm">
-                <Database className="w-3.5 h-3.5 text-amber-500" /> AWS Data Engineer Foundations
+              <span className="inline-flex items-center gap-1.5 dark:bg-slate-900 bg-white px-2.5 py-1 rounded-md border dark:border-cyan-500/30 border-cyan-200 dark:text-cyan-300 text-cyan-800 shadow-sm font-medium">
+                <Sparkles className="w-3.5 h-3.5 text-cyan-500" /> Be10x GenAI Specialist (13+ Tools)
               </span>
               <span className="inline-flex items-center gap-1.5 dark:bg-slate-900 bg-white px-2.5 py-1 rounded-md border dark:border-slate-800 border-slate-200 dark:text-slate-300 text-slate-700 shadow-sm">
                 <BarChart2 className="w-3.5 h-3.5 text-blue-500" /> Power BI & DAX Specialist
+              </span>
+              <span className="inline-flex items-center gap-1.5 dark:bg-slate-900 bg-white px-2.5 py-1 rounded-md border dark:border-slate-800 border-slate-200 dark:text-slate-300 text-slate-700 shadow-sm">
+                <Database className="w-3.5 h-3.5 text-amber-500" /> AWS Data Engineering
               </span>
             </div>
           </div>

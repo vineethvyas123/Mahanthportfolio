@@ -80,3 +80,39 @@ export interface PowerBIDashboardItem {
     growth: string;
   }[];
 }
+
+export interface AIUseCase {
+  id: string;
+  title: string;
+  category: 'agile' | 'bi' | 'etl' | 'productivity';
+  roleImpact: string;
+  description: string;
+  toolUsed: string;
+  metricsGain: string;
+  keyWorkflows: string[];
+  promptExample?: string;
+  outputExample?: string;
+}
+
+export interface AIToolItem {
+  id: string;
+  name: string;
+  category: string;
+  badge: string;
+  useCase: string;
+  proficiency: number;
+  highlight: string;
+}
+
+export interface AIPromptPlaygroundItem {
+  id: string;
+  title: string;
+  domain: string;
+  icon: string;
+  inputDescription: string;
+  inputCodeOrPrompt: string;
+  systemPrompt: string;
+  aiOutputTitle: string;
+  aiOutputContent: string;
+  efficiencyGain: string;
+}

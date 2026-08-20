@@ -244,7 +244,7 @@ export const AgileSprintSimulator: React.FC = () => {
                     <button
                       key={b.id}
                       onClick={() => triggerBlocker(b)}
-                      className="w-full text-left p-3 rounded-xl dark:bg-slate-950 bg-slate-50 hover:bg-amber-50 dark:hover:bg-slate-850 border dark:border-slate-800 border-slate-200 hover:border-amber-500/40 transition-all text-xs flex items-center justify-between group shadow-sm"
+                      className="w-full text-left p-3 rounded-xl dark:bg-slate-950 bg-slate-50 hover:bg-amber-50 dark:hover:bg-slate-900 border dark:border-slate-800 border-slate-200 hover:border-amber-500/40 transition-all text-xs flex items-center justify-between group shadow-sm"
                     >
                       <span className="dark:text-slate-300 text-slate-700 group-hover:text-amber-700 dark:group-hover:text-amber-300">{b.title}</span>
                       <span className="text-[10px] text-rose-600 dark:text-rose-400 font-mono font-bold shrink-0 ml-2">-{b.impact}% Velocity</span>

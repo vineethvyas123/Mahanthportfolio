@@ -11,7 +11,9 @@ import {
   Cpu, 
   Phone,
   Sun,
-  Moon
+  Moon,
+  Sparkles,
+  Bot
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
@@ -41,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
         setScrollProgress(0);
       }
 
-      const sections = ['hero', 'summary', 'experience', 'powerbi', 'simulator', 'skills', 'awards', 'contact'];
+      const sections = ['hero', 'summary', 'experience', 'powerbi', 'ai-lab', 'simulator', 'skills', 'awards', 'contact'];
       const scrollPosition = window.scrollY + 130;
 
       for (const section of sections) {
@@ -67,6 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
     { name: 'Experience', href: '#experience', icon: Briefcase },
     { name: 'Skills', href: '#skills', icon: CheckCircle2 },
     { name: 'Power BI Hub', href: '#powerbi', icon: BarChart3 },
+    { name: 'AI & GenAI Lab', href: '#ai-lab', icon: Sparkles },
     { name: 'Agile Simulator', href: '#simulator', icon: Cpu },
     { name: 'Awards & Certs', href: '#awards', icon: Award },
   ];

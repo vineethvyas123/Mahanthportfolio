@@ -162,7 +162,7 @@ export const RecruiterAIAssistant: React.FC<{ onOpenResume: () => void; onOpenCo
           bullets: [
             `Email: ${personalInfo.email}`,
             `Phone / WhatsApp: ${personalInfo.phone}`,
-            `Location: Sikandrabad / Bangalore / Hyderabad (Open to Hybrid & Remote)`
+            `Location: Hyderabad / Bangalore (Open to Hybrid & Remote)`
           ],
           actionLink: {
             text: 'Open Direct Contact Form',
