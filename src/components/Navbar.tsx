@@ -101,31 +101,31 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
             : 'bg-transparent py-5'
         }`}
       >
-      <div className="max-w-[1550px] mx-auto px-4 sm:px-8 lg:px-14 w-full">
-        <div className="flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 w-full">
+        <div className="flex items-center justify-between gap-2 lg:gap-4">
           {/* Brand Logo & Tag */}
-          <a href="#hero" className="flex items-center gap-3 group">
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-600 text-white font-heading font-extrabold text-lg shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform">
+          <a href="#hero" className="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
+            <div className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-600 text-white font-heading font-extrabold text-base sm:text-lg shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform shrink-0">
               SM
-              <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 rounded-full border-2 dark:border-slate-950 border-white" title="Available for roles"></span>
+              <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-500 rounded-full border-2 dark:border-slate-950 border-white" title="Available for roles"></span>
             </div>
-            <div>
+            <div className="shrink-0">
               <div className="flex items-center gap-2">
-                <span className="font-heading font-bold text-base sm:text-lg dark:text-white text-slate-900 group-hover:text-cyan-500 transition-colors">
+                <span className="font-heading font-bold text-sm sm:text-base xl:text-lg dark:text-white text-slate-900 group-hover:text-cyan-500 transition-colors whitespace-nowrap">
                   {personalInfo.name}
                 </span>
-                <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium dark:bg-cyan-500/10 bg-cyan-50 dark:text-cyan-400 text-cyan-700 border dark:border-cyan-500/20 border-cyan-200">
+                <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium dark:bg-cyan-500/10 bg-cyan-50 dark:text-cyan-400 text-cyan-700 border dark:border-cyan-500/20 border-cyan-200 whitespace-nowrap shrink-0">
                   CSM &bull; 7+ Yrs Exp
                 </span>
               </div>
-              <p className="text-xs dark:text-slate-400 text-slate-500 hidden sm:block">
+              <p className="text-[11px] sm:text-xs dark:text-slate-400 text-slate-500 hidden sm:block whitespace-nowrap">
                 Scrum Master &bull; Senior Software & BI Developer
               </p>
             </div>
           </a>
 
-          {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1 dark:bg-slate-900/60 bg-slate-100/80 p-1.5 rounded-full border dark:border-slate-800/80 border-slate-200/80 backdrop-blur-sm shadow-sm">
+          {/* Desktop Nav Links - Single Line Fixed */}
+          <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-1 dark:bg-slate-900/60 bg-slate-100/80 p-1.5 rounded-full border dark:border-slate-800/80 border-slate-200/80 backdrop-blur-sm shadow-sm shrink-0">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.replace('#', '');
               return (
@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
                   key={link.name}
                   href={link.href}
                   id={`nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 ${
+                  className={`px-2.5 2xl:px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
                     isActive
                       ? 'dark:bg-cyan-500/20 bg-cyan-500 text-cyan-900 dark:text-cyan-300 font-bold dark:border border-cyan-500/30 shadow-sm'
                       : 'dark:text-slate-300 text-slate-600 hover:text-cyan-600 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800/60'
@@ -146,12 +146,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
           </nav>
 
           {/* Action CTAs & Theme Switcher */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2 xl:gap-2.5 shrink-0">
             {/* Theme Toggle Button */}
             <button
               id="theme-toggle-desktop"
               onClick={toggleTheme}
-              className="p-2 rounded-xl dark:bg-slate-900 bg-slate-100 dark:text-amber-400 text-slate-700 border dark:border-slate-800 border-slate-200 hover:scale-105 active:scale-95 transition-all shadow-sm flex items-center justify-center group"
+              className="p-2 rounded-xl dark:bg-slate-900 bg-slate-100 dark:text-amber-400 text-slate-700 border dark:border-slate-800 border-slate-200 hover:scale-105 active:scale-95 transition-all shadow-sm flex items-center justify-center group shrink-0"
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
               title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
             >
@@ -165,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
             <button
               id="navbar-resume-btn"
               onClick={onOpenResume}
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold dark:bg-slate-800/90 bg-white hover:bg-slate-100 dark:hover:bg-slate-700/90 dark:text-slate-200 text-slate-700 border dark:border-slate-700/80 border-slate-200 transition-all hover:border-slate-300 dark:hover:border-slate-600 active:scale-95 shadow-sm"
+              className="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold dark:bg-slate-800/90 bg-white hover:bg-slate-100 dark:hover:bg-slate-700/90 dark:text-slate-200 text-slate-700 border dark:border-slate-700/80 border-slate-200 transition-all hover:border-slate-300 dark:hover:border-slate-600 active:scale-95 shadow-sm whitespace-nowrap shrink-0"
             >
               <FileText className="w-3.5 h-3.5 text-cyan-500" />
               <span>Resume</span>
@@ -174,15 +174,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
             <button
               id="navbar-contact-btn"
               onClick={onOpenContact}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold shadow-lg shadow-cyan-500/20 transition-all active:scale-95"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold shadow-lg shadow-cyan-500/20 transition-all active:scale-95 whitespace-nowrap shrink-0"
             >
               <Send className="w-3.5 h-3.5" />
               <span>Get in Touch</span>
             </button>
           </div>
 
-          {/* Mobile Menu Trigger */}
-          <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile Menu Trigger for smaller screens */}
+          <div className="flex xl:hidden items-center gap-2 shrink-0">
             {/* Mobile Theme Toggle Button */}
             <button
               id="theme-toggle-mobile"
@@ -217,7 +217,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact }) =
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden dark:bg-slate-950/95 bg-white/98 border-b dark:border-slate-800 border-slate-200 px-4 pt-3 pb-6 space-y-3 backdrop-blur-xl mt-3 animate-in fade-in slide-in-from-top-2 duration-200 shadow-2xl">
+        <div className="xl:hidden dark:bg-slate-950/95 bg-white/98 border-b dark:border-slate-800 border-slate-200 px-4 pt-3 pb-6 space-y-3 backdrop-blur-xl mt-3 animate-in fade-in slide-in-from-top-2 duration-200 shadow-2xl">
           
           <div className="flex items-center justify-between px-1 pb-2 border-b dark:border-slate-800 border-slate-100">
             <span className="text-xs font-semibold dark:text-slate-400 text-slate-500">Appearance Mode</span>
