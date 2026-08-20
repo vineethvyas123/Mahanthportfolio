@@ -44,9 +44,11 @@ export const RecruiterAIAssistant: React.FC<{ onOpenResume: () => void; onOpenCo
   ]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+  const isInitialMount = useRef(true);
 
   const quickQuestions = [
+    "What is Mahanth's AI experience?",
     "Why hire Mahanth as Scrum Master?",
     "What are his key Power BI achievements?",
     "Tell me about his Talend ETL & Cloud work",
@@ -55,7 +57,17 @@ export const RecruiterAIAssistant: React.FC<{ onOpenResume: () => void; onOpenCo
   ];
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    // Only scroll within the chat container, never moving the window/page
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
   }, [messages, isTyping]);
 
   const handleSend = (textToSend?: string) => {
@@ -77,7 +89,20 @@ export const RecruiterAIAssistant: React.FC<{ onOpenResume: () => void; onOpenCo
       const lower = query.toLowerCase();
       let botResponse: Message;
 
-      if (lower.includes('scrum') || lower.includes('agile') || lower.includes('ceremonies') || lower.includes('leadership')) {
+      if (lower.includes('ai') || lower.includes('artificial') || lower.includes('chatgpt') || lower.includes('copilot') || lower.includes('genai') || lower.includes('prompt') || lower.includes('llm') || lower.includes('be10x')) {
+        botResponse = {
+          id: (Date.now() + 1).toString(),
+          sender: 'bot',
+          text: `Mahanth is a Be10x Certified AI Tools Specialist with intermediate-level hands-on experience applying Generative AI across Agile lifecycle management, BI dashboard engineering, and ETL workflows:`,
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          bullets: [
+            'AI-Assisted Sprint Workflows: Uses ChatGPT & Copilot for rapid INVEST user story drafting and acceptance criteria generation, accelerating sprint refinement by 35%.',
+            'AI for BI & Analytics: Utilizes prompt engineering for instant DAX formula prototyping, SQL optimization, and text-to-insight queries.',
+            'ETL Code Assistance: Leverages AI for error log anomaly diagnosis, regex creation, and schema mapping validation.',
+            'Certified in 13+ GenAI tools (Be10x) for automated documentation, presentation synthesis, and sprint summaries.'
+          ]
+        };
+      } else if (lower.includes('scrum') || lower.includes('agile') || lower.includes('ceremonies') || lower.includes('leadership')) {
         botResponse = {
           id: (Date.now() + 1).toString(),
           sender: 'bot',
@@ -200,7 +225,7 @@ export const RecruiterAIAssistant: React.FC<{ onOpenResume: () => void; onOpenCo
       </div>
 
       {/* Messages Feed */}
-      <div className="flex-1 p-4 overflow-y-auto space-y-4 text-xs dark:bg-slate-950/40 bg-slate-50/50">
+      <div ref={chatContainerRef} className="flex-1 p-4 overflow-y-auto space-y-4 text-xs dark:bg-slate-950/40 bg-slate-50/50">
         {messages.map((msg) => (
           <div
             key={msg.id}
@@ -267,8 +292,6 @@ export const RecruiterAIAssistant: React.FC<{ onOpenResume: () => void; onOpenCo
             <span>Analyzing Mahanth's profile...</span>
           </div>
         )}
-
-        <div ref={messagesEndRef} />
       </div>
 
       {/* Suggested Quick Prompt Chips */}

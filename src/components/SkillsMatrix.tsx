@@ -9,7 +9,9 @@ import {
   BarChart3, 
   Cloud,
   Terminal,
-  ShieldCheck
+  ShieldCheck,
+  Bot,
+  Zap
 } from 'lucide-react';
 import { skillCategories } from '../data/portfolioData';
 
@@ -18,22 +20,24 @@ export const SkillsMatrix: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Agile & Project Management':
-        return ShieldCheck;
-      case 'Business Intelligence & Visualization':
-        return BarChart3;
-      case 'ETL & Data Engineering':
-        return Layers;
-      case 'Cloud & Big Data Platforms':
-        return Cloud;
-      case 'Databases & Querying':
-        return Database;
-      case 'Operating Systems & Schedulers':
-        return Terminal;
-      default:
-        return Cpu;
-    }
+    if (category.includes('Agile') || category.includes('Scrum')) return ShieldCheck;
+    if (category.includes('Power BI') || category.includes('Business Intelligence')) return BarChart3;
+    if (category.includes('AI') || category.includes('Generative')) return Sparkles;
+    if (category.includes('ETL') || category.includes('Data Engineering')) return Layers;
+    if (category.includes('Cloud')) return Cloud;
+    if (category.includes('Databases') || category.includes('SQL')) return Database;
+    if (category.includes('Operating') || category.includes('Schedulers')) return Terminal;
+    return Cpu;
+  };
+
+  const getShortCategoryName = (category: string) => {
+    if (category.includes('AI')) return 'AI & GenAI (Intermediate)';
+    if (category.includes('Agile')) return 'Agile & Scrum';
+    if (category.includes('Power BI')) return 'Power BI';
+    if (category.includes('ETL')) return 'Talend ETL';
+    if (category.includes('Cloud')) return 'AWS & Cloud';
+    if (category.includes('Databases')) return 'Databases & SQL';
+    return category.split(' ')[0];
   };
 
   const filteredCategories = skillCategories
@@ -60,7 +64,7 @@ export const SkillsMatrix: React.FC = () => {
             Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400">Tool Ecosystem</span>
           </h2>
           <p className="dark:text-slate-400 text-slate-600 text-base sm:text-lg">
-            7+ years of deep hands-on expertise spanning Agile facilitation, enterprise BI, ETL architecture, cloud platforms, and databases.
+            7+ years of deep hands-on expertise spanning Agile facilitation, enterprise BI, ETL architecture, cloud platforms, and intermediate AI enablement.
           </p>
         </div>
 
@@ -89,7 +93,7 @@ export const SkillsMatrix: React.FC = () => {
                     : 'dark:bg-slate-900 bg-white dark:text-slate-300 text-slate-700 dark:border-slate-800 border-slate-200 hover:border-slate-300 dark:hover:border-slate-700'
                 }`}
               >
-                {cat.category.split(' ')[0]}
+                {getShortCategoryName(cat.category)}
               </button>
             ))}
           </div>
@@ -102,7 +106,7 @@ export const SkillsMatrix: React.FC = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search skill (e.g. DAX, Talend, Jira)..."
+              placeholder="Search skill (e.g. AI, DAX, Talend, Jira)..."
               className="w-full pl-9 pr-3.5 py-2 rounded-xl dark:bg-slate-900 bg-white border dark:border-slate-800 border-slate-200 text-xs dark:text-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-cyan-500/50 shadow-sm"
             />
           </div>

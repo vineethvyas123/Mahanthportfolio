@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
@@ -16,6 +16,14 @@ import { FileText, Send, Sun, Moon } from 'lucide-react';
 function PortfolioApp() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Ensure initial landing always starts right at the top
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
 
   const scrollToContact = () => {
     const el = document.getElementById('contact');

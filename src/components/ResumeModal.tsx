@@ -226,6 +226,7 @@ ${personalInfo.education.degree} - ${personalInfo.education.institution} (${pers
               <div className="space-y-2 text-xs">
                 <p><strong className="text-cyan-600 dark:text-cyan-400">Agile & Project Management:</strong> Scrum, Jira, Asana, Confluence, MoSCoW, WSJF, Kano</p>
                 <p><strong className="text-blue-600 dark:text-blue-400">BI & Visualization:</strong> Power BI, DAX, Power Query, Microsoft Excel, Power Pivot</p>
+                <p><strong className="text-indigo-600 dark:text-indigo-400">AI & GenAI (Intermediate):</strong> Prompt Engineering, ChatGPT, Microsoft Copilot, Automated Story Slicing, DAX/SQL AI Generation, Be10x Suite (13+ AI Tools)</p>
                 <p><strong className="text-purple-600 dark:text-purple-400">ETL Tools:</strong> Talend Data Integration (6.x, 7.x, 8.x), TAC, tMap, SCD 1/2/3/6</p>
                 <p><strong className="text-sky-600 dark:text-sky-400">Cloud Platforms:</strong> AWS (S3, EC2, DynamoDB, Athena, RedShift), Google Cloud Platform (GCP)</p>
                 <p><strong className="text-emerald-600 dark:text-emerald-400">Databases:</strong> Oracle SQL Developer, SQL Server, Teradata, PostgreSQL, MySQL, Hive, SSAS, SSMS, SSDT</p>

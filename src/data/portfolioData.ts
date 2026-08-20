@@ -3,7 +3,7 @@ import { Experience, SkillCategory, Certification, Award, DashboardMetric, Power
 export const personalInfo = {
   name: "Sai Mahanth Mada",
   title: "Scrum Master & Senior Software Developer",
-  subtitle: "Specializing in Agile Transformation, Power BI Analytics, Cloud Data Engineering & Talend ETL Architecture",
+  subtitle: "Specializing in Agile Transformation, Power BI Analytics, Cloud Data Engineering, Talend ETL & AI-Assisted Workflows",
   experienceYears: "7+",
   phone: "+91 8121791352",
   email: "saimahanth.mada@gmail.com",
@@ -17,8 +17,8 @@ export const personalInfo = {
     institution: "Malla Reddy Engineering College, Hyderabad",
     year: "2015",
   },
-  careerObjective: "Pursue challenging senior leadership roles in the IT sector, emphasizing high-impact expertise in Scrum Master and Power BI Developer positions, while aiming to contribute to innovative project outcomes, resilient teams, and organizational data excellence.",
-  about: "Accomplished IT professional with over 7 years of expertise in Power BI Analytics, ETL Development, and Agile frameworks, delivering sophisticated enterprise data solutions and driving digital transformation. Experienced in spearheading Agile ceremonies, optimizing cloud data processing pipelines on AWS, and architecting real-time Power BI dashboards that turn complex business data into strategic, actionable intelligence.",
+  careerObjective: "Pursue challenging senior leadership roles in the IT sector, emphasizing high-impact expertise in Scrum Master, Power BI Developer, and AI-accelerated delivery positions, while aiming to contribute to innovative project outcomes, resilient teams, and organizational data excellence.",
+  about: "Accomplished IT professional with over 7 years of expertise in Power BI Analytics, ETL Development, Agile frameworks, and intermediate Generative AI workflows—delivering sophisticated enterprise data solutions, driving digital transformation, and leveraging modern AI tooling (ChatGPT, Copilot, Prompt Engineering) to accelerate sprint ceremonies, DAX prototyping, and data engineering operations.",
   status: "Open for Opportunities",
   keyMetrics: [
     { label: "Years Experience", value: "7+" },
@@ -59,7 +59,9 @@ export const experiences: Experience[] = [
     ],
     highlights: [
       "Orchestrated critical Talend upgrade from version 7.3.1 to 8.0.1, managing developer coordination, deployment planning, and rigorous testing to ensure seamless migration with zero operational disruption.",
+      "Pioneered AI-assisted Agile workflows utilizing Generative AI (ChatGPT & Microsoft Copilot) for automated INVEST user story drafting, acceptance criteria generation, and sprint risk registers—accelerating refinement cycle times by 35%.",
       "Enhanced team predictability and delivery excellence by integrating MoSCoW, Kano Model, and WSJF prioritization frameworks, boosting on-time Sprint Goal completion rates significantly.",
+      "Utilized intermediate AI prompt engineering to accelerate DAX formula formulation and SQL query optimization, reducing report debugging cycles by 25%.",
       "Led innovative continuous improvement initiatives by implementing diverse Retrospective techniques, mitigating retrospective fatigue and increasing actionable sprint action item completion.",
       "Developed over 60 interactive Power BI dashboards, improving business data accessibility and leadership decision-making speed by 23%.",
       "Enhanced data accuracy and reporting efficiency, achieving a 15% reduction in data errors through optimized Power Query workflows.",
@@ -67,12 +69,13 @@ export const experiences: Experience[] = [
     ],
     metrics: [
       { label: "Decision Speed Boost", value: "+23%" },
+      { label: "Story Drafting Speedup", value: "+35%" },
       { label: "Operational Improvement", value: "+30%" },
       { label: "Error Reduction", value: "-15%" },
       { label: "Talend Upgrade Downtime", value: "0 hrs" }
     ],
-    skillsUsed: ["Scrum Master", "Agile Coaching", "Power BI", "DAX", "Power Query", "Talend (v8.0.1)", "AWS S3 & Athena", "WSJF / MoSCoW", "Jira & Confluence"],
-    technologies: ["Power BI Desktop", "DAX Measures", "Power Query M", "Talend 8.0.1", "AWS S3", "AWS Athena", "Jira", "Confluence", "Oracle SQL"]
+    skillsUsed: ["Scrum Master", "Agile Coaching", "Power BI", "DAX", "Generative AI Prompting", "Power Query", "Talend (v8.0.1)", "AWS S3 & Athena", "WSJF / MoSCoW", "Jira & Confluence"],
+    technologies: ["Power BI Desktop", "DAX Measures", "ChatGPT / Copilot", "Power Query M", "Talend 8.0.1", "AWS S3", "AWS Athena", "Jira", "Confluence", "Oracle SQL"]
   },
   {
     id: "mphasis-charles-schwab",
@@ -198,6 +201,21 @@ export const skillCategories: SkillCategory[] = [
       { name: "Incremental Load Strategies & Control Tables", level: 94, experience: "6+ yrs" },
       { name: "Job Scheduling (Control-M, TAC)", level: 90, experience: "5+ yrs" },
       { name: "Talend Version Migration (7.x to 8.x)", level: 95, experience: "3+ yrs", highlight: true }
+    ]
+  },
+  {
+    category: "AI & Generative AI Tools",
+    description: "Intermediate AI enablement, prompt engineering, AI-assisted sprint planning, automated DAX/SQL generation, and workflow automation",
+    iconName: "Sparkles",
+    skills: [
+      { name: "Prompt Engineering & Few-Shot LLM Workflows", level: 88, experience: "2+ yrs", highlight: true },
+      { name: "AI-Assisted Sprint Planning & User Story Generation", level: 92, experience: "2+ yrs", highlight: true },
+      { name: "Automated DAX & SQL Query Generation (ChatGPT / Copilot)", level: 90, experience: "2+ yrs", highlight: true },
+      { name: "Be10x Certified GenAI Suite (13+ AI Productivity Tools)", level: 94, experience: "2+ yrs", highlight: true },
+      { name: "AI-Powered Documentation, Acceptance Criteria & Release Notes", level: 91, experience: "2+ yrs" },
+      { name: "ETL Error Diagnosis & Code Refactoring with AI", level: 86, experience: "2+ yrs" },
+      { name: "Natural Language Data Querying & Text-to-Insight", level: 85, experience: "2+ yrs" },
+      { name: "AI Agents & Autonomous Task Automation", level: 82, experience: "1+ yrs" }
     ]
   },
   {
@@ -433,10 +451,14 @@ export const coreCompetenciesList = [
   "Agile Coaching & Mentorship",
   "Velocity & Burndown Analysis",
   "Scrum Ceremonies Facilitation",
+  "AI-Assisted Sprint Planning & User Stories",
+  "Prompt Engineering & LLM Workflows",
+  "Automated DAX & SQL Generation via AI",
   "Data Modeling & ETL Integration",
   "Interactive Dashboard Design",
   "KPI Development & Metrics Tracking",
   "Report Automation & Systematization",
+  "Be10x GenAI Productivity Automation",
   "User Training & Support",
   "Scenario & Predictive Modeling",
   "Performance Tuning & Optimization",

@@ -7,7 +7,11 @@ import {
   Award, 
   Sparkles, 
   Search,
-  BookOpen
+  BookOpen,
+  Bot,
+  Zap,
+  CheckCircle2,
+  Cpu
 } from 'lucide-react';
 import { personalInfo, coreCompetenciesList } from '../data/portfolioData';
 
@@ -82,7 +86,7 @@ export const ExecutiveSummary: React.FC = () => {
         </div>
 
         {/* 3 Core Value Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
@@ -116,6 +120,78 @@ export const ExecutiveSummary: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* AI Work & Generative AI Enablement Spotlight */}
+        <div className="p-6 sm:p-8 rounded-3xl dark:bg-gradient-to-r dark:from-slate-900 dark:via-cyan-950/20 dark:to-slate-900 bg-gradient-to-r from-cyan-50/80 via-white to-blue-50/80 border dark:border-cyan-500/30 border-cyan-200 shadow-xl mb-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="relative z-10 space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b dark:border-slate-800 border-cyan-100 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-2xl dark:bg-cyan-500/10 bg-cyan-100 text-cyan-600 dark:text-cyan-400 border dark:border-cyan-500/20 border-cyan-300 shadow-sm">
+                  <Bot className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full dark:bg-cyan-500/20 bg-cyan-200 dark:text-cyan-300 text-cyan-800 text-[10px] font-bold uppercase tracking-wider mb-1">
+                    <Sparkles className="w-3 h-3" /> Intermediate AI Work & Applied GenAI
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold dark:text-white text-slate-900">
+                    AI-Powered Agile Acceleration & Analytics Automation
+                  </h3>
+                </div>
+              </div>
+              <span className="text-xs font-mono font-semibold px-3 py-1 rounded-xl dark:bg-slate-900 bg-white border dark:border-slate-700 border-cyan-200 dark:text-cyan-400 text-cyan-700 shadow-sm self-start sm:self-auto">
+                Be10x Certified (13+ AI Tools)
+              </span>
+            </div>
+
+            <p className="text-xs sm:text-sm dark:text-slate-300 text-slate-700 leading-relaxed max-w-4xl">
+              Actively leveraging intermediate Generative AI practices, advanced prompt engineering, and LLM-assisted workflows to accelerate Scrum ceremonies, synthesize complex technical documentation, generate optimized DAX/SQL logic, and eliminate delivery bottlenecks.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+              <div className="p-4 rounded-2xl dark:bg-slate-950/80 bg-white border dark:border-slate-800 border-slate-200 shadow-sm space-y-2">
+                <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-bold text-xs">
+                  <Zap className="w-4 h-4" />
+                  <span>Agile Story Synthesis</span>
+                </div>
+                <p className="text-xs dark:text-slate-300 text-slate-600 leading-relaxed">
+                  Automated drafting of INVEST user stories, edge-case acceptance criteria, and sprint risk logs via ChatGPT & Copilot—cutting story prep time by <strong>35%</strong>.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl dark:bg-slate-950/80 bg-white border dark:border-slate-800 border-slate-200 shadow-sm space-y-2">
+                <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs">
+                  <BarChart3 className="w-4 h-4" />
+                  <span>DAX & SQL Prototyping</span>
+                </div>
+                <p className="text-xs dark:text-slate-300 text-slate-600 leading-relaxed">
+                  Utilizing prompt patterns to generate complex time-intelligence DAX measures and optimize relational SQL queries, reducing debugging turnaround by <strong>25%</strong>.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl dark:bg-slate-950/80 bg-white border dark:border-slate-800 border-slate-200 shadow-sm space-y-2">
+                <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 font-bold text-xs">
+                  <Cpu className="w-4 h-4" />
+                  <span>ETL Anomaly Diagnosis</span>
+                </div>
+                <p className="text-xs dark:text-slate-300 text-slate-600 leading-relaxed">
+                  Applying AI assistance for fast Talend error log analysis, regex creation, and schema mapping validation, accelerating data pipeline resolution.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl dark:bg-slate-950/80 bg-white border dark:border-slate-800 border-slate-200 shadow-sm space-y-2">
+                <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-xs">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>Productivity Automation</span>
+                </div>
+                <p className="text-xs dark:text-slate-300 text-slate-600 leading-relaxed">
+                  Certified mastery in 13+ GenAI productivity tools for automated sprint release notes, presentation synthesis, and structured meeting summaries.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Career Objective & Education Strip */}
